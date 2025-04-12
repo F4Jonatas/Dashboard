@@ -1,0 +1,203 @@
+@import url( https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap );
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap' ) ;*/
+
+/*@import url( https://necolas.github.io/normalize.css/8.0.1/normalize.css ) ;*/
+@import url( ./animations.css ) ;
+
+:root {
+	--corprincipal: #000;
+	--cinza: rgb( 167 167 167 );
+	--branco: #FFF;
+	--preto: #000;
+}
+
+body {
+	user-select: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.flex{
+	justify-content: space-between;
+	display: flex;
+}
+
+#telalogin {
+	background: linear-gradient( -45deg, rgb(240 126 144) 80%, rgb(249 102 124) );
+	background-size: 400% 400%;
+
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+
+	text-align: center;
+	height: 100vh;
+}
+
+
+.container-fundo {
+	box-shadow: 0px 11px 34px #00000033;
+	background-color: var( --branco );
+	box-sizing: border-box;
+	border-radius: 15px;
+	max-width: 450px;
+	padding: 50px;
+	height: auto;
+	width: 100%;
+	scale: calc( 1 / var( --dppx ));
+}
+
+#logo-cliente img{
+	max-width: 200px;
+	width: 100%;
+}
+
+.container-logins{
+	padding: 25px 0px;
+	max-width: 440px;
+	margin: auto;
+}
+
+.container-logins .login input{
+	border: 1px solid var(--cinza);
+	box-sizing: border-box;
+	margin: 5px 0 15px 0;
+	color: var(--preto);
+	border-radius: 6px;
+	font-size: 16px;
+	padding: 10px;
+	height: 44px;
+	width: 100%;
+
+	transition: 0.3s;
+}
+
+.container-logins .login input::placeholder{
+	color: var(--cinza);
+}
+
+.container-logins .login input:focus-visible{
+	outline: 1px solid var(--corprincipal);
+	border: 1px solid var(--corprincipal);
+}
+
+.container-logins .login p {
+	cursor: pointer;
+	font-size: 14px;
+	opacity: 0.6;
+	margin: 0;
+}
+
+.container-logins .login p:hover {
+	opacity: 1;
+}
+
+
+/*.container-logins .botao-login{
+	background-color: var(--branco);
+	border: 1px solid var(--cinza);
+	border-radius: 6px;
+	margin-top: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 150px;
+	height: 45px;
+
+	transition: 0.3s;
+}
+
+.container-logins .botao-login:hover{
+	background-color: var(--corprincipal);
+	border: 1px solid var(--corprincipal);
+	color: var(--branco);
+}*/
+
+
+.container-logins .botao-login {
+	--width: 150px;
+	--height: 45px;
+
+	border-radius: 6px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: var(--branco);
+	margin-top: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	width: var( --width );
+	height: var( --height );
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-logins .botao-login::before {
+	content: "";
+	background-image: conic-gradient( transparent 20deg, rgb(249 102 124) 120deg, transparent 121deg );
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	animation: rotate 2s linear infinite;
+}
+
+.container-logins .botao-login::after {
+	content: attr( css-content );
+	width: calc( var( --width ) - 7px );
+	height: calc( var( --height ) - 7px );
+	background: var( --branco );
+	position: absolute;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var( --preto );
+	font-size: initial;
+	border: 1px solid var(--cinza);
+	transition: 0.3s;
+}
+
+.container-logins .botao-login:hover::after {
+	background-color: var(--corprincipal);
+	border: 1px solid var(--corprincipal);
+	color: var(--branco);
+}
+
+
+
+
+.autenticacao{
+	box-shadow: 0px 11px 34px #0000001a;
+	background-color: var(--branco);
+	border-radius: 10px;
+	width: fit-content;
+	padding: 10px 5px;
+	margin: 20px auto;
+	display: flex;
+}
+
+.autenticacao img{
+	margin: 5px 10px 0;
+	cursor: pointer;
+	width: 25px;
+}
+
+#logo-empresa{
+	width: 100%;
+}
+
+#logo-empresa img{
+	max-width: 100px;
+}
+
+@media screen and (max-width: 500px) {
+	.container-fundo {
+		max-width: 350px;
+		padding: 35px;
+	}
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Dashboard MiaMar Make</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="icon" href="../img/icon.png" type="image/x-icon">
+		<link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+
+		<!-- <link rel="manifest" href="../manifest.json" /> -->
+
+
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gardevoir" /> -->
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- <script src="/eel.js"></script> -->
+		<script src="../js/eel.js"></script>
+		<script src="../js/jquery.js"></script>
+
+		<!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+		<link rel="stylesheet" href="../css/sortable.css" />
+		<script src="../js/sortable.js"></script>
+
+		<script type="module" src="../js/main.js"></script>
+	</head>
+
+	<body class="light-mode">
+		<div id="telalogin">
+
+			<!-- Fundo branco -->
+			<div class="container-fundo">
+
+				<!-- Logo do cliente -->
+				<div id="logo-cliente">
+					<img src="../img/logo.png" alt="logo" draggable="false">
+				</div>
+
+				<!-- Logins -->
+				<div class="container-logins">
+
+					<!-- Login padrão -->
+					<form class="login">
+						<input name="login" type="text" placeholder="Login">
+						<input name="pass" type="password" placeholder="Senha">
+						<div class="flex">
+							<p>Redefinir senha</p>
+							<p>Criar conta</p>
+						</div>
+						<button type="submit" class="botao-login" css-content="Entrar">Entrar</button>
+					</form>
+
+					<!-- Login por outro cliente -->
+					<div class="autenticacao">
+						<div id="google">
+							<img src="../img/google_logo.png" alt="" draggable="false">
+						</div>
+						<div id="microsoft">
+							<img src="../img/ms_logo.png" alt="" draggable="false">
+						</div>
+					</div>
+				</div>
+
+				<!-- Logo Empresa -->
+				<div id="logo-empresa">
+					<img src="../img/empresa_logo.png" alt="Empresa" draggable="false">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
